@@ -19,7 +19,7 @@ RUN GITHUB_REPO="https://github.com/tianon/gosu" \
 # goreman supervisor install latest
 RUN GITHUB_REPO="https://github.com/mattn/goreman" \
   && LATEST=`curl -s  $GITHUB_REPO"/releases/latest" | grep -Eo "v[0-9]*.[0-9]*.[0-9]*"` \
-  && curl -L $GITHUB_REPO"/releases/download/"$LATEST"/goreman_linux_amd64.zip" > goreman.zip \
+  && curl -L $GITHUB_REPO"/releases/download/v0.3.4/goreman_linux_amd64.zip" > goreman.zip \
   && unzip goreman.zip && mv /goreman /usr/local/bin/goreman && rm -R goreman*
 
 # goreman setup
